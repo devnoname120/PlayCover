@@ -81,6 +81,8 @@ At the moment, PlayCover can only be installed and executed on M1 MacBooks. Devi
     - It should open a normal terminal window
     - Type the following in this window (or copy paste it)
         - `sudo nvram boot-args="amfi_get_out_of_my_way=1"`
+    - ⚠️ If you have a Mac with Apple Silicon (M1, M2) you need to run the following command instead or you won't be able to open normal apps
+        - `sudo nvram boot-args="amfi_get_out_of_my_way=1 ipc_control_port_options=0 -arm64e_preview_abi"` 
     - If it appears that nothing has happened, this is correct.
     - Now restart your mac once again
 
